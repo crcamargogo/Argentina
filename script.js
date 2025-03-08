@@ -278,13 +278,17 @@ function initVideoModal() {
 
     // Array of different YouTube video URLs for click and spin events
     const clickVideos = [
-        'aiavatar_user_instant_video_uY00C0Jq4yvUM0ddGY36_814332674497491d9e1fbe8a72076c4a_result_08905b4b2e26436883ea969d77005a7d.mp4',  // Rick Roll
-        
+        'https://www.youtube.com/watch?v=dQw4w9WgXcQ',  // Rick Roll
+        'https://www.youtube.com/watch?v=aqz-KE-bpKQ',  // Another fun video
+        'https://www.youtube.com/watch?v=kJQP7kiw5Fk',  // Another option
+        'https://www.youtube.com/watch?v=X2WH8h1l4-M'   // Another option
     ];
 
     const spinVideos = [
-        'aiavatar_user_instant_video_uY00C0Jq4yvUM0ddGY36_e3374edd316f4de3b701e26a3b190d63_result_cc034b17c10546adaa2039582c3d75db.mp4',  // Celebration video
-        
+        'https://www.youtube.com/watch?v=iik25wqIuFo',  // Celebration video
+        'https://www.youtube.com/watch?v=StJS51nqVfM',  // Another fun video
+        'https://www.youtube.com/watch?v=Vhz9AMgxlW0',  // Another option
+        'https://www.youtube.com/watch?v=oYmzdvMoUUA'   // Another option
     ];
 
     function getRandomVideoUrl(videoArray) {
@@ -344,8 +348,28 @@ function initVideoModal() {
     };
 }
 
+function initParticipantSearch() {
+    const searchInput = document.getElementById('participantSearch');
+    const participantCards = document.querySelectorAll('.participant-card');
+
+    searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+
+        participantCards.forEach(card => {
+            const participantName = card.querySelector('.name').textContent.toLowerCase();
+            
+            if (participantName.includes(searchTerm)) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     createGroupDisplay();  // Create empty group displays first
     createParticipantsGrid();
     initVideoModal();
+    initParticipantSearch();  
 });
