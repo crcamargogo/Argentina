@@ -278,7 +278,7 @@ function initVideoModal() {
 
     // Array of different YouTube video URLs for click and spin events
     const clickVideos = [
-        'aiavatar_user_instant_video_uY00C0Jq4yvUM0ddGY36_814332674497491d9e1fbe8a72076c4a_result_08905b4b2e26436883ea969d77005a7d.mp4',  // Rick Roll
+        'Video1.mp4',  // Rick Roll
         
     ];
 
