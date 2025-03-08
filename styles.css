@@ -173,7 +173,7 @@ h1 {
     background-color: var(--atento-gray);
     padding: 15px;
     border-radius: 8px;
-    color: white; /* Asegura buen contraste */
+    color: #f1c40f; /* Amarillo para mejor contraste */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
     transition: all 0.3s ease-in-out; /* Transición suave */
 }
