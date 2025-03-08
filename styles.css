@@ -173,7 +173,17 @@ h1 {
     background-color: var(--atento-gray);
     padding: 15px;
     border-radius: 8px;
+    color: white; /* Asegura buen contraste */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: all 0.3s ease-in-out; /* Transición suave */
 }
+
+/* Efecto hover para resaltar el contenedor */
+.result-container:hover {
+    transform: scale(1.02); /* Pequeño zoom al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 
 #groupsContainer {
     display: grid;

@@ -283,7 +283,7 @@ function initVideoModal() {
     ];
 
     const spinVideos = [
-        'aiavatar_user_instant_video_uY00C0Jq4yvUM0ddGY36_e3374edd316f4de3b701e26a3b190d63_result_cc034b17c10546adaa2039582c3d75db.mp4',  // Celebration video
+        'Video2.mp4',  // Celebration video
         // Another option
     ];
 
