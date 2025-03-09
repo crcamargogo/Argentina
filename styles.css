@@ -156,7 +156,7 @@ h1 {
     transform: rotate(90deg);
     color: white;
     font-weight: 500;
-    font-size: 10px;
+    font-size: 3px;
     text-align: center;
     width: 200px;
     display: flex;
@@ -332,14 +332,7 @@ h1 {
     display: none;
 }
 
-.video-header {
-    background-color: var(--atento-blue);
-    color: white;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 
 .search-container {
     display: flex;
