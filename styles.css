@@ -332,14 +332,7 @@ h1 {
     display: none;
 }
 
-.video-header {
-    background-color: var(--atento-blue);
-    color: white;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 
 .search-container {
     display: flex;
