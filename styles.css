@@ -85,6 +85,12 @@ h1 {
     color: white;
 }
 
+/* Estilo para ocultar el nombre en los modales */
+#clickParticipantName, #spinParticipantName {
+    display: none;
+}
+
+
 .participant-card.hidden {
     display: none;
 }
