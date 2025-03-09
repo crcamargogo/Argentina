@@ -155,7 +155,7 @@ h1 {
 .wheel-spinner-text {
     transform: rotate(90deg);
     color: white;
-    font-weight: 500;
+    font-weight: 100;
     font-size: 3px;
     text-align: center;
     width: 200px;
