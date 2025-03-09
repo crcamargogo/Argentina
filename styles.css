@@ -289,17 +289,7 @@ h1 {
     border: 3px solid var(--atento-blue);
 }
 
-#clickVideoModal .video-modal-content {
-    top: 20px;
-    right: 50px;
-    border: 3px solid var(--atento-blue);
-}
 
-#spinVideoModal .video-modal-content {
-    top: 20px;
-    right: calc(50px + 400px);
-    border: 3px solid var(--atento-blue);
-}
 
 @keyframes floatAnimation {
     0%, 100% { transform: translateY(0) scale(0.8); }
