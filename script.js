@@ -94,14 +94,19 @@ const currentGroupAssignments = {};
 const selectedParticipants = new Set(); // Track selected participants
 
 function createAvatar(name) {
-    const nameParts = name.split(' ');
-    
-    if (nameParts.length < 2) {
-        // Si no hay apellido, solo se usa la primera letra del primer nombre
-        return nameParts[0][0];
+    if (!name || typeof name !== 'string') {
+        // Si name es undefined, nulo o no es una cadena, devolvemos un valor por defecto
+        return 'XX';
     }
 
-    return nameParts[0][0] + nameParts[1][0];
+    const nameParts = name.split(' ');
+
+    if (nameParts.length < 2) {
+        // Si no hay apellido, solo usamos la primera letra del primer nombre
+        return nameParts[0][0] || 'X'; // Verifica que no esté vacío
+    }
+
+    return (nameParts[0][0] || 'X') + (nameParts[1][0] || 'X'); // Verifica que no esté vacío
 }
 
 function createGroupDisplay() {
