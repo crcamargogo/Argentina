@@ -2,15 +2,10 @@ import confetti from 'confetti';
 
 const groupMapping = {
     "FACILITADOR": [
-        "CEDERMAS, SEBASTIAN", "ALBASINI, EZEQUIEL DARIO", 
+        "DI LISIO, JULIO OSCAR", "CEDERMAS, SEBASTIAN", "ALBASINI, EZEQUIEL DARIO", 
         "ARENAS, JOSE MANUEL", "FIGUCCIO, LAURA VERÓNICA", "STECKLOW TECHERA, MARCELO", 
         "FURFARO, HERNAN", "CARPINELLI, SILVINA LORENA", "MERLO, LAURA PATRICIA"
     ],
-
-    "COMANDANTE": [
-        "LOPEZ,MIGUEL JOSE", "DI LISIO, JULIO OSCAR"
-    ],
-
     "ÁGIL Y SIMPLE": [
         "LLEBEILI, MARIELA VERONICA", "NU脕EZ, VIRGINIA PAULA", "SERAFINI, LUCAS", 
         "NAVAS, DENISE AYELEN", "FIGUEROA, NAHUEL LIVIO SEBASTI", "MARCHETTI, OSCAR ALBERTO", 
@@ -173,7 +168,6 @@ function createWheel(selectedParticipant) {
     wheelSpinner.innerHTML = '';
     
     const colors = {
-        "COMANDANTE": "#3498db",
         "FACILITADOR": "#3498db",
         "ÁGIL Y SIMPLE": "#2ecc71", 
         "En equipo ganamos": "#e74c3c",
