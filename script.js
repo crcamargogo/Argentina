@@ -4,10 +4,7 @@ const groupMapping = {
 
     "COMANDANTE": [
         "DI LISIO, JULIO OSCAR", "LOPEZ, MIGUEL"
-    ], 
-    "SOPORTE AEROESPACIAL": [
-        "BARON,DIEGO", "CHARRY,JILL"
-    ], 
+    ],    
     "FACILITADOR": [
         "CEDERMAS, SEBASTIAN", "ALBASINI, EZEQUIEL DARIO", 
         "ARENAS, JOSE MANUEL", "FIGUCCIO, LAURA VERÓNICA", "STECKLOW TECHERA, MARCELO", 
@@ -94,19 +91,7 @@ const currentGroupAssignments = {};
 const selectedParticipants = new Set(); // Track selected participants
 
 function createAvatar(name) {
-    if (!name || typeof name !== 'string') {
-        // Si name es undefined, nulo o no es una cadena, devolvemos un valor por defecto
-        return 'XX';
-    }
-
-    const nameParts = name.split(' ');
-
-    if (nameParts.length < 2) {
-        // Si no hay apellido, solo usamos la primera letra del primer nombre
-        return nameParts[0][0] || 'X'; // Verifica que no esté vacío
-    }
-
-    return (nameParts[0][0] || 'X') + (nameParts[1][0] || 'X'); // Verifica que no esté vacío
+    return name.split(' ')[0][0] + name.split(' ')[1][0];
 }
 
 function createGroupDisplay() {
@@ -127,11 +112,10 @@ function createGroupDisplay() {
 
         groupsContainer.appendChild(groupCard);
 
-        // Inicializa las asignaciones actuales de grupos
+        // Initialize the current group assignments
         currentGroupAssignments[group] = [];
     });
 }
-
 
 function addParticipantToGroup(participant) {
     // Find the predefined group for the participant
@@ -190,7 +174,6 @@ function createWheel(selectedParticipant) {
     const colors = {
 
         "COMANDANTE": "#3498db",
-        "SOPORTE AEROESPACIAL": "#3498db",
         "FACILITADOR": "#3498db",
         "ÁGIL Y SIMPLE": "#2ecc71", 
         "En equipo ganamos": "#e74c3c",
