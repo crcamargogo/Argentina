@@ -94,7 +94,14 @@ const currentGroupAssignments = {};
 const selectedParticipants = new Set(); // Track selected participants
 
 function createAvatar(name) {
-    return name.split(' ')[0][0] + name.split(' ')[1][0];
+    const nameParts = name.split(' ');
+    
+    if (nameParts.length < 2) {
+        // Si no hay apellido, solo se usa la primera letra del primer nombre
+        return nameParts[0][0];
+    }
+
+    return nameParts[0][0] + nameParts[1][0];
 }
 
 function createGroupDisplay() {
@@ -115,10 +122,11 @@ function createGroupDisplay() {
 
         groupsContainer.appendChild(groupCard);
 
-        // Initialize the current group assignments
+        // Inicializa las asignaciones actuales de grupos
         currentGroupAssignments[group] = [];
     });
 }
+
 
 function addParticipantToGroup(participant) {
     // Find the predefined group for the participant
