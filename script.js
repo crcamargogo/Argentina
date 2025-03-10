@@ -45,7 +45,7 @@ const groupMapping = {
         "ZAMORANO, LUIS", "CAMOZZI, JOSE EDUARDO", "NIETO, MARIANA ALEJANDRA", 
         "GONZALEZ, IVANA LORENA"
     ],
-    "Socios estratégicos": [
+    "Socios estrategicos": [
         "RESSIA, ROMINA SILVANA", "BAEZ, ANA KARENINA", "VALLEJOS, CLAUDIA ELIZABETH", 
         "EBEL, FRANCO IVAN", "CEBALLOS, YAMILA JACQUELINE", "ACUÑA, FERNANDO IVAN", 
         "ROSSI, GUILLERMO DAMIAN", "ESCOBAR, PABLO EMMANUEL", "BAEZ, LUCIANO ANTONIO", 
@@ -181,7 +181,7 @@ function createWheel(selectedParticipant) {
         "Cuidamos de los nuestros": "#9b59b6",
         "Entrega de resultados": "#1abc9c", 
         "Mente Abierta": "#34495e",
-        "Socios estratégicos": "#d35400", 
+        "Socios estrategicos": "#d35400", 
         "One Atento": "#2980b9"
     };
     
