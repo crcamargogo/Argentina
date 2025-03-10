@@ -181,7 +181,7 @@ function createWheel(selectedParticipant) {
         "Cuidamos de los nuestros": "#9b59b6",
         "Entrega de resultados": "#1abc9c", 
         "Mente Abierta": "#34495e",
-        "Socios estratéegicos": "#d35400", 
+        "Socios estratégicos": "#d35400", 
         "One Atento": "#2980b9"
     };
     
