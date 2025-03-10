@@ -5,7 +5,7 @@ const groupMapping = {
     "COMANDANTE": [
         "DI LISIO, JULIO OSCAR", "LOPEZ, MIGUEL"
     ], 
-    "SOPORTEAEROESPACIAL": [
+    "SOPORTE AEROESPACIAL": [
         "BARON,DIEGO", "CHARRY,JILL"
     ], 
     "FACILITADOR": [
