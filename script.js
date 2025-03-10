@@ -6,11 +6,7 @@ const groupMapping = {
         "DI LISIO, JULIO OSCAR", "LOPEZ, MIGUEL"
     ], 
 
-    "SOPORTE AEROESPACIAL": [
-        "BARON,DIEGO", "CHARRY,ERIKA"
-    ], 
-
-
+    
     "FACILITADOR": [
         "CEDERMAS, SEBASTIAN", "ALBASINI, EZEQUIEL DARIO", 
         "ARENAS, JOSE MANUEL", "FIGUCCIO, LAURA VERÓNICA", "STECKLOW TECHERA, MARCELO", 
@@ -180,7 +176,6 @@ function createWheel(selectedParticipant) {
     const colors = {
 
         "COMANDANTE": "#3498db",
-        "SOPORTE AEROESPACIAL": "#3498db",
         "FACILITADOR": "#3498db",
         "ÁGIL Y SIMPLE": "#2ecc71", 
         "En equipo ganamos": "#e74c3c",
