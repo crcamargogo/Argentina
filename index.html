@@ -61,30 +61,7 @@
             </div>
         </div>
         
-        <script>
-        function setParticipantInfo(name) {
-            document.getElementById("clickParticipantName").textContent = name;
         
-            // Formatear el nombre para que coincida con la imagen
-            let avatarFileName = name.toLowerCase().replace(/\s+/g, "_") + ".jpg"; // Ejemplo: "Juan Pérez" -> "juan_pérez.jpg"
-            let avatarPath = "avatars/" + avatarFileName; 
-        
-            // Intentar cargar el avatar
-            let avatarImg = document.getElementById("avatarImage");
-            fetch(avatarPath, { method: "HEAD" }) // Verificar si la imagen existe
-                .then(response => {
-                    if (response.ok) {
-                        avatarImg.src = avatarPath; // Si existe, se muestra
-                    } else {
-                        avatarImg.src = "avatars/default.jpg"; // Si no, se usa un avatar por defecto
-                    }
-                })
-                .catch(() => avatarImg.src = "avatars/default.jpg"); // Manejo de error en caso de fallo
-        }
-        
-        // Ejemplo de uso
-       
-        </script>
         
 
         <div id="spinVideoModal" class="video-modal">
