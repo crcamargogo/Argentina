@@ -223,6 +223,7 @@ function createWheel(selectedParticipant) {
     
     setTimeout(() => {
         // Clear previous result
+        
         resultContainer.innerHTML = '';
         
         // Wait a moment before revealing the result and adding to group
