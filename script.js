@@ -3,7 +3,7 @@ import confetti from 'confetti';
 const groupMapping = {
 
     "COMANDANTE": [
-        "DI LISIO, JULIO OSCAR", "LOPEZ, MIGUEL"
+        "Andre del Pilar", "LOPEZ, MIGUEL"
     ],    
     "FACILITADOR": [
         "CEDERMAS, SEBASTIAN", "ALBASINI, EZEQUIEL DARIO", 
