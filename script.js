@@ -2,13 +2,9 @@ import confetti from 'confetti';
 
 const groupMapping = {
 
-    "COMANDANTE": [
-        "Andre del Pilar", "LOPEZ, MIGUEL"
-    ],    
+    
     "FACILITADOR": [
-        "CEDERMAS, SEBASTIAN", "ALBASINI, EZEQUIEL DARIO", 
-        "ARENAS, JOSE MANUEL", "FIGUCCIO, LAURA VERÓNICA", "STECKLOW TECHERA, MARCELO", 
-        "FURFARO, HERNAN", "CARPINELLI, SILVINA LORENA", "MERLO, LAURA PATRICIA"
+         "Andre del Pilar", "LOPEZ, MIGUEL","RAMIREZ,MARTIN"
     ],
     "ÁGIL Y SIMPLE": [
         "LLEBEILI, MARIELA VERONICA", "NU脕EZ, VIRGINIA PAULA", "SERAFINI, LUCAS", 
@@ -173,7 +169,7 @@ function createWheel(selectedParticipant) {
     
     const colors = {
 
-        "COMANDANTE": "#3498db",
+        
         "FACILITADOR": "#3498db",
         "ÁGIL Y SIMPLE": "#2ecc71", 
         "En equipo ganamos": "#e74c3c",
