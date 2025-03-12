@@ -228,9 +228,7 @@ function createWheel(selectedParticipant) {
         // Wait a moment before revealing the result and adding to group
         setTimeout(() => {
             resultContainer.innerHTML = `
-            <img src="https://crcamargogo.github.io/Argentina/avatars/${selectedParticipant.replace(/ /g, '_')}.jpg" 
-     alt="Avatar" class="avatar">
-
+            <img src="${selectedParticipant.replace(/ /g, '_')}.jpg" alt="Avatar" class="avatar">
             <p>Participante: ${selectedParticipant}</p>
             <p>Grupo: ${predefinedGroup}</p>
         `;
