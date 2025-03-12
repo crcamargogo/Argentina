@@ -253,10 +253,12 @@ function createParticipantsGrid() {
         const participantCard = document.createElement('div');
         participantCard.classList.add('participant-card');
         
-        const avatar = document.createElement('div');
+        // Crear el elemento <img> para el avatar
+        const avatar = document.createElement('img');
         avatar.classList.add('avatar');
-        avatar.textContent = createAvatar(participant);
-        
+        avatar.src = `avatars/${participant.replace(/ /g, '_')}.png`; // Usa el nombre del participante
+        avatar.alt = `Avatar de ${participant}`;
+
         const name = document.createElement('div');
         name.classList.add('name');
         name.textContent = participant;
@@ -269,6 +271,7 @@ function createParticipantsGrid() {
         participantsGrid.appendChild(participantCard);
     });
 }
+
 
 function initVideoModal() {
     const clickVideoModal = document.getElementById('clickVideoModal');
