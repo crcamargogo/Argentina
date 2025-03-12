@@ -377,27 +377,37 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+function setParticipantInfo(name) {
+    document.getElementById("clickParticipantName").textContent = name;
 
-        function setParticipantInfo(name) {
-            document.getElementById("clickParticipantName").textContent = name;
-        
-            // Formatear el nombre para que coincida con la imagen
-            let avatarFileName = name.toLowerCase().replace(/\s+/g, "_") + ".jpg"; // Ejemplo: "Juan Pérez" -> "juan_pérez.jpg"
-            let avatarPath = "avatars/" + avatarFileName; 
-        
-            // Intentar cargar el avatar
-            let avatarImg = document.getElementById("avatarImage");
-            fetch(avatarPath, { method: "HEAD" }) // Verificar si la imagen existe
-                .then(response => {
-                    if (response.ok) {
-                        avatarImg.src = avatarPath; // Si existe, se muestra
-                    } else {
-                        avatarImg.src = "avatars/default.jpg"; // Si no, se usa un avatar por defecto
-                    }
-                })
-                .catch(() => avatarImg.src = "avatars/default.jpg"); // Manejo de error en caso de fallo
-        }
-        
-        // Ejemplo de uso
-       
-   
+    // Formatear el nombre para la imagen del avatar
+    let avatarFileName = name.toLowerCase().replace(/\s+/g, "_") + ".jpg";
+    let avatarPath = "avatars/" + avatarFileName;
+
+    // Intentar cargar el avatar
+    let avatarImg = document.getElementById("avatarImage");
+    fetch(avatarPath, { method: "HEAD" })
+        .then(response => {
+            avatarImg.src = response.ok ? avatarPath : "avatars/default.jpg";
+        })
+        .catch(() => avatarImg.src = "avatars/default.jpg");
+}
+
+// Función para cargar video
+document.getElementById("loadClickVideoBtn").addEventListener("click", function() {
+    let videoUrl = document.getElementById("clickVideoUrlInput").value;
+    let videoId = extractYouTubeID(videoUrl);
+    if (videoId) {
+        document.getElementById("clickVideoFrame").src = "https://www.youtube.com/embed/" + videoId;
+    } else {
+        alert("URL no válida. Asegúrate de pegar un enlace de YouTube.");
+    }
+});
+
+// Función para extraer ID del video de YouTube
+function extractYouTubeID(url) {
+    let match = url.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([^?&]+)/);
+    return match ? match[1] : null;
+}
+
+setParticipantInfo(name); // Cambia el nombre y el avatar
