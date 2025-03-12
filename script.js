@@ -3,7 +3,7 @@ import confetti from 'confetti';
 const groupMapping = {
 
     "COMANDANTE": [
-        "Andre del Pilar", "LOPEZ, MIGUEL"
+        "DI LISIO, JULIO OSCAR", "LOPEZ, MIGUEL"
     ],    
     "FACILITADOR": [
         "CEDERMAS, SEBASTIAN", "ALBASINI, EZEQUIEL DARIO", 
@@ -375,39 +375,3 @@ document.addEventListener('DOMContentLoaded', () => {
     initVideoModal();
     initParticipantSearch();  
 });
-
-
-function setParticipantInfo(name) {
-    document.getElementById("clickParticipantName").textContent = name;
-
-    // Formatear el nombre para la imagen del avatar
-    let avatarFileName = name.toLowerCase().replace(/\s+/g, "_") + ".jpg";
-    let avatarPath = "avatars/" + avatarFileName;
-
-    // Intentar cargar el avatar
-    let avatarImg = document.getElementById("avatarImage");
-    fetch(avatarPath, { method: "HEAD" })
-        .then(response => {
-            avatarImg.src = response.ok ? avatarPath : "avatars/default.jpg";
-        })
-        .catch(() => avatarImg.src = "avatars/default.jpg");
-}
-
-// Función para cargar video
-document.getElementById("loadClickVideoBtn").addEventListener("click", function() {
-    let videoUrl = document.getElementById("clickVideoUrlInput").value;
-    let videoId = extractYouTubeID(videoUrl);
-    if (videoId) {
-        document.getElementById("clickVideoFrame").src = "https://www.youtube.com/embed/" + videoId;
-    } else {
-        alert("URL no válida. Asegúrate de pegar un enlace de YouTube.");
-    }
-});
-
-// Función para extraer ID del video de YouTube
-function extractYouTubeID(url) {
-    let match = url.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([^?&]+)/);
-    return match ? match[1] : null;
-}
-
-setParticipantInfo(name); // Cambia el nombre y el avatar
