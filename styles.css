@@ -110,7 +110,7 @@ h1 {
 .avatar {
     width: 400px;
     height: 400px;
-    background-color: var(--atento-blue);
+    
     color: white;
     border-radius: 50%;
     display: flex;
